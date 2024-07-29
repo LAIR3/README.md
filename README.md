@@ -36,7 +36,9 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
 docker ps
-
+# remove bdk-toolbox-postgres-pgvectorscale
+docker rmi blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale
+docker system prune -a
 docker compose version
 ```
 modify pgvectorscale as docker build using toolbox.Dockerfile

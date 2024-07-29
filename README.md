@@ -20,7 +20,14 @@ echo 'export PATH="$PATH:/usr/local/go/bin"' | sudo tee -a ./bashrc
 source $HOME/.bashrc
 ```
 
-nodejs<br />
+# insatll nodejs<br />
+```bash
+nodejs -v
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install nodejs -y
+nodejs -v
+```
+
 # install docker<br />
 ```bash
 # docker install https://docs.docker.com/engine/install/ubuntu/

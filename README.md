@@ -61,6 +61,10 @@ git config --global user.name "Professor-Codephreak"
 forge init --force
 ```
 
+```bash
+sudo apt install postgresql-client-common
+```
+
 foundry creates script and src folders
 
 The LAIR3-BDK and LAIR3-BDK2 Layer 3 Blockchain Development Kits are designed to facilitate the deployment and management of advanced blockchain solutions, specifically supporting zkEVM Rollup and Validium technologies. Utilizing the Kurtosis SDK, polygon-cli, avalanche subnet-evm and ignite with Starlark. Blockchain Deployment Kit facilitates the creation and deployment of customized blockchain environments with enhanced observability and testing capabilities.

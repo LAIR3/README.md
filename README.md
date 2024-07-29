@@ -21,7 +21,12 @@ source $HOME/.bashrc
 ```
 
 nodejs<br />
-docker<br />
+# install docker<br />
+```bash
+# docker install https://docs.docker.com/engine/install/ubuntu/
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+```
+
 kurtosis-cli<br />
 # polygon-cli blockchain swiss army knife source build
 ```bash

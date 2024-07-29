@@ -4,7 +4,7 @@ instructions are somewhat specific to Ubuntu 22.04LTS<br />
 requirements include but not limited to<br />
 
 
-# Install go1.21.6 on Ubuntu Linux 22.04LTS for amd64 using bash<br />
+#  go1.21.6 install on Ubuntu Linux 22.04LTS for amd64 using bash<br />
 ```bash
 #get wget
 sudo apt install wget
@@ -20,7 +20,7 @@ echo 'export PATH="$PATH:/usr/local/go/bin"' | sudo tee -a ./bashrc
 source $HOME/.bashrc
 ```
 
-# insatll nodejs<br />
+# nodejs install<br />
 ```bash
 nodejs -v
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
@@ -28,7 +28,7 @@ sudo apt-get install nodejs -y
 nodejs -v
 ```
 
-# install docker<br />
+# docker install<br />
 ```bash
 # docker install https://docs.docker.com/engine/install/ubuntu/
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
@@ -41,6 +41,7 @@ docker compose version
 ```
 
 kurtosis-cli<br />
+
 # polygon-cli blockchain swiss army knife source build
 ```bash
 snap install yq

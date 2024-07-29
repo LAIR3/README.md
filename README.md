@@ -84,8 +84,7 @@ psql -U master_user -h 127.0.0.1 -p 5432 -d master
 SELECT * FROM pg_extension WHERE extname = 'vectorscale';
 ```
 
-
-
+<a href="https://lighthouse-book.sigmaprime.io/">lighthouse</a><br />
 
 Environment Setup
 Clone the Repository and Install Dependencies

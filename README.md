@@ -76,6 +76,16 @@ set postgresql master password
 export POSTGRES_MASTER_PASSWORD="your_secure_password"
 ```
 
+check postgresql installation
+```bash
+sudo apt install postgresql-client-common
+psql -U master_user -h 127.0.0.1 -p 5432 -d master
+\dx
+SELECT * FROM pg_extension WHERE extname = 'vectorscale';
+```
+
+
+
 
 Environment Setup
 Clone the Repository and Install Dependencies

@@ -4,7 +4,7 @@ instructions are somewhat specific to Ubuntu 22.04LTS<br />
 # requirements include but not limited to<br />
 
 
-Installing go1.21.6 on Ubuntu Linux 22.04LTS for amd64 using bash<br />
+# Install go1.21.6 on Ubuntu Linux 22.04LTS for amd64 using bash<br />
 ```bash
 #get wget
 sudo apt install wget

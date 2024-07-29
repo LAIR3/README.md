@@ -8,12 +8,10 @@ kurtosis-cli<br />
 polygon-cli<br />
 
 
-The LAIR3-BDK and LAIR3-BDK2 Layer 3 Blockchain Development Kits are designed to facilitate the deployment and management of advanced blockchain solutions, specifically supporting zkEVM Rollup and Validium technologies. Utilizing the Kurtosis SDK and Starlark integration, this kit enables the creation and deployment of customized blockchain environments with enhanced observability and testing capabilities.
+The LAIR3-BDK and LAIR3-BDK2 Layer 3 Blockchain Development Kits are designed to facilitate the deployment and management of advanced blockchain solutions, specifically supporting zkEVM Rollup and Validium technologies. Utilizing the Kurtosis SDK, polygon-cli, avalanche subnet-evm and ignite with Starlark. Blockchain Deployment Kit facilitates the creation and deployment of customized blockchain environments with enhanced observability and testing capabilities.
 
-The primary goal is to integrate Kurtosis-CDK with zkEVM solutions, ensuring the entire process is documented thoroughly in Markdown format for GitHub.
+The primary goal is to to make blockchain deployment a sane operation accessiable to regular developers interested in dapplications development.
 
-Command Overview
-The following is a list of essential commands and operations available within the LAIR3-BDK toolkit, specifically for setting up and managing your blockchain deployment.
 
 Environment Setup
 Clone the Repository and Install Dependencies

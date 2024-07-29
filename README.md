@@ -1,7 +1,7 @@
 # layer 3 blockchain deployment kit<br />
 instructions are somewhat specific to Ubuntu 22.04LTS<br />
 
-# requirements include but not limited to<br />
+requirements include but not limited to<br />
 
 
 # Install go1.21.6 on Ubuntu Linux 22.04LTS for amd64 using bash<br />

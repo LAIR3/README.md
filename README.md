@@ -1,5 +1,13 @@
 # layer 3 blockchain deployment kit
 
+requirements include but not limited to<br />
+golang<br />
+nodejs<br />
+docker<br />
+kurtosis-cli<br />
+polygon-cli<br />
+
+
 The LAIR3-BDK and LAIR3-BDK2 Layer 3 Blockchain Development Kits are designed to facilitate the deployment and management of advanced blockchain solutions, specifically supporting zkEVM Rollup and Validium technologies. Utilizing the Kurtosis SDK and Starlark integration, this kit enables the creation and deployment of customized blockchain environments with enhanced observability and testing capabilities.
 
 The primary goal is to integrate Kurtosis-CDK with zkEVM solutions, ensuring the entire process is documented thoroughly in Markdown format for GitHub.

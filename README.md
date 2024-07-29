@@ -67,6 +67,11 @@ The LAIR3-BDK and LAIR3-BDK2 Layer 3 Blockchain Development Kits are designed to
 
 The primary goal is to to make blockchain deployment a sane operation accessiable to regular developers interested in dapplications development.
 
+set postgresql master password
+```bash
+export POSTGRES_MASTER_PASSWORD="your_secure_password"
+```
+
 
 Environment Setup
 Clone the Repository and Install Dependencies

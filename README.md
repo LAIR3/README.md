@@ -7,13 +7,12 @@ docker<br />
 kurtosis-cli<br />
 polygon-cli<br />
 
-##### foundry #####<br />
+# foundry<br />
 ```bash
 curl -L https://foundry.paradigm.xyz | bash
 source $HOME/.bashrc
 foundryup
 ```
-###################<br />
 
 
 The LAIR3-BDK and LAIR3-BDK2 Layer 3 Blockchain Development Kits are designed to facilitate the deployment and management of advanced blockchain solutions, specifically supporting zkEVM Rollup and Validium technologies. Utilizing the Kurtosis SDK, polygon-cli, avalanche subnet-evm and ignite with Starlark. Blockchain Deployment Kit facilitates the creation and deployment of customized blockchain environments with enhanced observability and testing capabilities.

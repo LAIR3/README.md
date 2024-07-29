@@ -129,7 +129,7 @@ open http://127.0.0.1:49651/targets
 Fetch Service Logs
 
 ```bash
-kurtosis service logs cdk-v1 zkevm-agglayer-001
+kurtosis service logs bdk-v2 zkevm-agglayer-001
 ```
 
 Add Permissionless Node

@@ -40,7 +40,6 @@ cd BDK2
 git config --global user.email "codephreak@dmg.finance"
 git config --global user.name "Professor-Codephreak"
 forge init --force
-mkdir -p src
 ```
 
 foundry creates script and src folders

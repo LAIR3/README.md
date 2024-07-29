@@ -39,10 +39,14 @@ docker ps
 
 docker compose version
 ```
-include pgvectorscale as docker build from toolbox.Dockerfile
+modify pgvectorscale as docker build using toolbox.Dockerfile
 ```bash
 docker build -t blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale -f docker/toolbox.Dockerfile .
+docker login
+docker tag blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale
+docker push blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale
 ```
+
 
 kurtosis-cli<br />
 

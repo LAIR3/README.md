@@ -116,6 +116,11 @@ SELECT * FROM pg_extension WHERE extname = 'vectorscale';
 <a href="https://lighthouse-book.sigmaprime.io/">lighthouse</a><br />
 <a href="https://docs.timescale.com/self-hosted/latest/install/installation-docker/">pgvectorscale timescale</a><br />
 
+# zkevm_bridge logs ./lib/zkevm_bridge.star<br />
+```bash
+kurtosis service logs cdk-v1 zkevm-bridge-ui-001
+```
+
 # run the bridge UI standalone<br />
 ```bash
 docker run -it --rm -p 8080:80 leovct/zkevm-bridge-ui:multi-network<br />

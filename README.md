@@ -110,6 +110,11 @@ sudo apt install netstat hardinfo
 
 # troubleshoot
 
+list enclaves
+```bash
+kurtosis enclave ls
+```
+
 # Inspect the Kurtosis enclave
 ```bash
 kurtosis enclave inspect bdk-v2

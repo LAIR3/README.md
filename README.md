@@ -1,6 +1,24 @@
 # layer 3 blockchain deployment kit<br />
 instructions are somewhat specific to Ubuntu 22.04LTS<br />
 
+# kurtosis logs directory error
+
+Create Missing Directories:
+It seems the directories /var/log/kurtosis/2024/31 and similar are missing. You can manually create these directories to resolve the issue.
+
+```bash
+sudo mkdir -p /var/log/kurtosis/2024/31
+sudo chown -R $USER:docker /var/log/kurtosis
+```
+Verify Docker Permissions:
+```bash
+sudo chmod -R 755 /var/log/kurtosis
+````
+Restart Kurtosis and Docker:
+```bash
+kurtosis engine restart
+sudo systemctl restart docker
+```
 requirements include but not limited to<br />
 
 

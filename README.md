@@ -93,7 +93,8 @@ psql -U master_user -h 127.0.0.1 -p 5432 -d master
 \dx
 SELECT * FROM pg_extension WHERE extname = 'vectorscale';
 ```
-
+# reference links<br />
+<a href="https://rollupjs.org/configuration-options/#output-manualchunks">manualchunks</a><br />
 <a href="https://lighthouse-book.sigmaprime.io/">lighthouse</a><br />
 
 Environment Setup

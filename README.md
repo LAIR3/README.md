@@ -115,20 +115,20 @@ list enclaves
 kurtosis enclave ls
 ```
 
-# Inspect the Kurtosis enclave
+Inspect the Kurtosis enclave
 ```bash
 kurtosis enclave inspect bdk-v2
 ```
-# Check the logs of the failing service
+Check the logs of the failing service
 ```bash
 kurtosis service logs bdk-v2 zkevm-bridge-ui-001
 ```
-# Open a shell into the service container to manually inspect and debug
+Open a shell into the service container to manually inspect and debug
 ```bash
 kurtosis service shell bdk-v2 zkevm-bridge-ui-001
 ```
 
-Environment Setup
+# Environment Setup
 Clone the Repository and Install Dependencies
 
 ```bash

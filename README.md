@@ -131,6 +131,9 @@ docker run -it --rm -p 8080:80 leovct/zkevm-bridge-ui:multi-network<br />
 sudo apt install netstat hardinfo
 ```
 
+# run the zkevm-prover standalone
+docker run -it --rm -p 50071:50071 -p 50061:50061 hermeznetwork/zkevm-prover:v6.0.2 /bin/bash
+
 # troubleshoot ###################################################################
 
 list enclaves

@@ -103,9 +103,24 @@ SELECT * FROM pg_extension WHERE extname = 'vectorscale';
 docker run -it --rm -p 8080:80 leovct/zkevm-bridge-ui:multi-network<br />
 ```bash
 
-# recomended
+# recomended diagnostics
 ```bash
 sudo apt install netstat hardinfo
+```
+
+# troubleshoot
+
+# Inspect the Kurtosis enclave
+```bash
+kurtosis enclave inspect bdk-v2
+```
+# Check the logs of the failing service
+```bash
+kurtosis service logs bdk-v2 zkevm-bridge-ui-001
+```
+# Open a shell into the service container to manually inspect and debug
+```bash
+kurtosis service shell bdk-v2 zkevm-bridge-ui-001
 ```
 
 Environment Setup

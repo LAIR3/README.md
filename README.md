@@ -119,10 +119,6 @@ Inspect the Kurtosis enclave
 ```bash
 kurtosis enclave inspect bdk-v2
 ```
-show fails
-```bash
-kurtosis enclave inspect bdk-v3 --show-failed
-```
 
 Check the logs of the failing service
 ```bash

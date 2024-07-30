@@ -103,6 +103,11 @@ SELECT * FROM pg_extension WHERE extname = 'vectorscale';
 docker run -it --rm -p 8080:80 leovct/zkevm-bridge-ui:multi-network<br />
 ```bash
 
+# recomended
+```bash
+sudo apt install netstat hardinfo
+```
+
 Environment Setup
 Clone the Repository and Install Dependencies
 

@@ -108,7 +108,7 @@ docker run -it --rm -p 8080:80 leovct/zkevm-bridge-ui:multi-network<br />
 sudo apt install netstat hardinfo
 ```
 
-# troubleshoot
+# troubleshoot ###################################################################
 
 list enclaves
 ```bash
@@ -119,6 +119,11 @@ Inspect the Kurtosis enclave
 ```bash
 kurtosis enclave inspect bdk-v2
 ```
+show fails
+```bash
+kurtosis enclave inspect bdk-v3 --show-failed
+```
+
 Check the logs of the failing service
 ```bash
 kurtosis service logs bdk-v2 zkevm-bridge-ui-001

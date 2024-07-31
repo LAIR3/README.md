@@ -104,6 +104,15 @@ set postgresql master password
 export POSTGRES_MASTER_PASSWORD="your_secure_password"
 ```
 
+Set Validator PostgreSQL Password
+
+Log into PostgreSQL
+```bash
+sudo -u postgres psql
+ALTER USER validator1 WITH PASSWORD 'new_validator1_password';
+\q
+```
+
 check postgresql installation
 ```bash
 sudo apt install postgresql-client-common

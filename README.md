@@ -147,6 +147,14 @@ docker run --name zkevm-bridge-ui -p 80:8080 -v /path/to/.env:/app/.env leovct/z
 sudo apt install netstat hardinfo
 ```
 
+# run grapha as a standalone
+```bash
+docker run -d --name=grafana -p 3000:3000 grafana/grafana:latest
+docker start grafana
+open http://localhost:3000/login
+docker stop graphana
+```
+
 # run the zkevm-prover standalone
 docker run -it --rm -p 50071:50071 -p 50061:50061 hermeznetwork/zkevm-prover:v6.0.2 /bin/bash
 

@@ -1,26 +1,7 @@
 # layer 3 blockchain deployment kit<br />
 instructions are somewhat specific to Ubuntu 22.04LTS<br />
 
-# kurtosis logs directory error
-
-Create Missing Directories:
-It seems the directories /var/log/kurtosis/2024/31 and similar are missing. You can manually create these directories to resolve the issue.
-
-```bash
-sudo mkdir -p /var/log/kurtosis/2024/31
-sudo chown -R $USER:docker /var/log/kurtosis
-```
-Verify Docker Permissions:
-```bash
-sudo chmod -R 755 /var/log/kurtosis
-````
-Restart Kurtosis and Docker:
-```bash
-kurtosis engine restart
-sudo systemctl restart docker
-```
-requirements include but not limited to<br />
-
+# requirements
 
 #  go1.21.6 install on Ubuntu Linux 22.04LTS for amd64 using bash<br />
 ```bash
@@ -64,21 +45,16 @@ docker system prune -a
 docker compose version
 ```
 
-
-modify pgvectorscale as docker build using toolbox.Dockerfile
+# kurtosis install
+https://docs.kurtosis.com/install/
 ```bash
-docker build -t blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale -f docker/toolbox.Dockerfile .
-docker login
-docker tag blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale
-docker push blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale
+echo "deb [trusted=yes] https://apt.fury.io/kurtosis-tech/ /" | sudo tee /etc/apt/sources.list.d/kurtosis.list
+sudo apt update
+sudo apt install kurtosis-cli
 ```
 
-```bash
-docker network ls
-docker network inspect NAME
-```
 
-# polygon-cli blockchain swiss army knife source build
+# polygon-cli install blockchain swiss army knife source build
 
 ```bash
 snap install yq
@@ -87,7 +63,7 @@ git clone https://github.com/maticnetwork/polygon-cli.git
 cd polygon-cli
 make install
 ```
-# foundry
+# foundry instatll 
 ```bash
 curl -L https://foundry.paradigm.xyz | bash
 source $HOME/.bashrc
@@ -108,7 +84,7 @@ The LAIR3-BDK and LAIR3-BDK2 Layer 3 Blockchain Development Kits are designed to
 
 The primary goal is to to make blockchain deployment a sane operation accessiable to regular developers interested in dapplications development.
 
-set postgresql master password
+# set PostgreSQL master password
 ```bash
 export POSTGRES_MASTER_PASSWORD="your_secure_password"
 ```
@@ -122,19 +98,48 @@ ALTER USER validator1 WITH PASSWORD 'new_validator1_password';
 \q
 ```
 
-check postgresql installation
+# check postgresql installation
 ```bash
 sudo apt install postgresql-client-common
 psql -U master_user -h 127.0.0.1 -p 5432 -d master
 \dx
 SELECT * FROM pg_extension WHERE extname = 'vectorscale';
 ```
+
+optional upggrade PostgreSQL modify pgvectorscale as docker build using toolbox.Dockerfile
+```bash
+docker build -t blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale -f docker/toolbox.Dockerfile .
+docker login
+docker tag blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale
+docker push blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale
+```
+
 # reference links<br />
 <a href="https://rollupjs.org/configuration-options/#output-manualchunks">manualchunks</a><br />
 <a href="https://lighthouse-book.sigmaprime.io/">lighthouse</a><br />
 <a href="https://docs.timescale.com/self-hosted/latest/install/installation-docker/">pgvectorscale timescale</a><br />
 
 # troubleshoot ###################################################################
+
+# kurtosis logs directory error
+
+Create Missing Directories:
+If directories /var/log/kurtosis/ and similar are missing you can manually create these directories to resolve the issue
+
+```bash
+sudo mkdir -p /var/log/kurtosis/2024/31
+sudo chown -R $USER:docker /var/log/kurtosis
+```
+Verify Docker Permissions:
+```bash
+sudo chmod -R 755 /var/log/kurtosis
+````
+Restart Kurtosis and Docker:
+```bash
+kurtosis engine restart
+sudo systemctl restart docker
+```
+requirements include but not limited to<br />
 
 # zkevm_bridge logs ./lib/zkevm_bridge.star<br />
 ```bash
@@ -230,6 +235,11 @@ docker network rm $(docker network ls -q)
 Prune the system:
 ```bash
 docker system prune -a --volumes
+```
+
+```bash
+docker network ls
+docker network inspect NAME
 ```
 
 ############ START ############

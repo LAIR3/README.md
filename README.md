@@ -301,6 +301,7 @@ docker run -d --name=grafana -p 3000:3000 grafana/grafana:latest
 docker start grafana
 open http://localhost:49701/login
 docker logs grafana
+docker logs grafana-001
 docker stop graphana
 ```
 

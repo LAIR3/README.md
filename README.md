@@ -29,13 +29,17 @@ sudo apt install wget
 #wget go
 wget https://go.dev/dl/go1.21.6.linux-amd64.tar.gz
 #remove existing go
-rm -rf /usr/local/go
+sudo rm -rf /usr/local/go
+# possibly necessary
+sudo apt remove golang $$ autoremove
 #extract verbosely with force
 sudo tar -xvf go1.21.6.linux-amd64.tar.gz -C /usr/local/
 #add go path to ./bashrc current user with default Ubuntu 22 bash shell
 echo 'export PATH="$PATH:/usr/local/go/bin"' | sudo tee -a ./bashrc
 #refresh your bash shell
 source $HOME/.bashrc
+# verify correct version install
+go version
 ```
 
 # nodejs install<br />

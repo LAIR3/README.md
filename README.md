@@ -200,7 +200,7 @@ sh scripts/tool_check.sh
 kurtosis clean --all
 ```
 
-# START
+############ START ############
 # BDK-v3 as Kurtosis Enclave
 
 ```bash

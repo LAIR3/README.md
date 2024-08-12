@@ -39,10 +39,6 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
 docker ps
-# remove bdk-toolbox-postgres-pgvectorscale
-docker rmi blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale
-docker system prune -a
-docker compose version
 ```
 
 # kurtosis install
@@ -106,7 +102,7 @@ psql -U master_user -h 127.0.0.1 -p 5432 -d master
 SELECT * FROM pg_extension WHERE extname = 'vectorscale';
 ```
 
-optional upggrade PostgreSQL modify pgvectorscale as docker build using toolbox.Dockerfile
+# optional upggrade PostgreSQL modify pgvectorscale as docker build using toolbox.Dockerfile
 ```bash
 docker build -t blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale -f docker/toolbox.Dockerfile .
 docker login
@@ -114,6 +110,12 @@ docker tag blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale blockchain
 docker push blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale
 ```
 
+# remove bdk-toolbox-postgres-pgvectorscale
+```bash
+docker rmi blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale
+docker system prune -a
+docker compose version
+```
 # reference links<br />
 <a href="https://rollupjs.org/configuration-options/#output-manualchunks">manualchunks</a><br />
 <a href="https://lighthouse-book.sigmaprime.io/">lighthouse</a><br />

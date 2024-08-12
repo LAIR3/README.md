@@ -70,7 +70,7 @@ docker push blockchaindeploymentkit/bdk-toolbox-postgres-pgvectorscale
 ```bash
 docker network ls
 docker network inspect NAME
-```bash
+```
 
 
 

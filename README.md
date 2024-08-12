@@ -151,15 +151,6 @@ docker run --name zkevm-bridge-ui -p 80:8080 -v /path/to/.env:/app/.env leovct/z
 sudo apt install netstat hardinfo
 ```
 
-# run grafana as a standalone
-```bash
-docker run -d --name=grafana -p 3000:3000 grafana/grafana:latest
-docker start grafana
-open http://localhost:3000/login
-docker logs grafana
-docker stop graphana
-```
-
 # run the zkevm-prover standalone
 ```bash
 docker run -it --rm -p 50071:50071 -p 50061:50061 hermeznetwork/zkevm-prover:v6.0.2 /bin/bash
@@ -213,19 +204,6 @@ kurtosis run --enclave BDK-v3 --args-file params.yml --image-download always .
 kurtosis enclave inspect BDK-v3
 ```
 
-# View Grafana Dashboard
-
-```bash
-open http://127.0.0.1:49701/dashboards
-open http://127.0.0.1:49701/login
-```
-
-# Prometheus Targets
-
-```
-open http://127.0.0.1:49651/targets
-```
-
 # Fetch Service Logs
 
 ```bash
@@ -273,9 +251,33 @@ polycli loadtest --requests 500 --legacy --rpc-url $ETH_RPC_URL --verbosity 700 
 Prometheus captures all the metrics for the running services.
 Accessible via: http://127.0.0.1:49678
 
+# Prometheus Targets
+
+```
+open http://127.0.0.1:49651/targets
+```
+
 # <a href="https://grafana.com/">Grafana</a>
 Dashboards for visualizing metrics.
 Accessible via: http://127.0.0.1:49701
+
+# run grafana as a standalone
+```bash
+docker run -d --name=grafana-001 -p 49701:3000 grafana/grafana:latest
+
+docker run -d --name=grafana -p 3000:3000 grafana/grafana:latest
+docker start grafana
+open http://localhost:49701/login
+docker logs grafana
+docker stop graphana
+```
+
+# View Grafana Dashboard
+
+```bash
+open http://127.0.0.1:49701/dashboards
+open http://127.0.0.1:49701/login
+```
 
 # Panoptichain
 Monitors on-chain metrics such as blocks, transactions, and smart contract calls.

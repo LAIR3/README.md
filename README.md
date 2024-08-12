@@ -137,7 +137,9 @@ kurtosis service logs cdk-v1 zkevm-bridge-ui-001
 
 # run the bridge UI standalone<br />
 ```bash
-docker run -it --rm -p 8080:80 leovct/zkevm-bridge-ui:multi-network<br />
+docker run -it --rm -p 8080:80 leovct/zkevm-bridge-ui:multi-network
+generic instruction
+docker run --name zkevm-bridge-ui -p 80:8080 -v /path/to/.env:/app/.env leovct/zkevm-bridge-ui:multi-network
 ```bash
 
 # recomended diagnostics

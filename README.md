@@ -64,34 +64,6 @@ docker system prune -a
 docker compose version
 ```
 
-# docker remove
-stop all running containers
-```bash
-docker stop $(docker ps -aq)
-```
-Remove all containers:
-```bash
-docker rm $(docker ps -aq)
-```
-
-Remove all images:
-```bash
-docker rmi -f $(docker images -q)
-```
-
-Remove all volumes:
-```bash
-docker volume rm $(docker volume ls -q)
-```
-Remove all networks:
-````bash
-docker network rm $(docker network ls -q)
-```
-Prune the system:
-```bash
-docker system prune -a --volumes
-```
-
 
 modify pgvectorscale as docker build using toolbox.Dockerfile
 ```bash
@@ -219,6 +191,34 @@ sh scripts/tool_check.sh
 
 ```bash
 kurtosis clean --all
+```
+
+# docker remove
+stop all running containers
+```bash
+docker stop $(docker ps -aq)
+```
+Remove all containers:
+```bash
+docker rm $(docker ps -aq)
+```
+
+Remove all images:
+```bash
+docker rmi -f $(docker images -q)
+```
+
+Remove all volumes:
+```bash
+docker volume rm $(docker volume ls -q)
+```
+Remove all networks:
+````bash
+docker network rm $(docker network ls -q)
+```
+Prune the system:
+```bash
+docker system prune -a --volumes
 ```
 
 ############ START ############

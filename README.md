@@ -213,7 +213,7 @@ Remove all volumes:
 docker volume rm $(docker volume ls -q)
 ```
 Remove all networks:
-````bash
+```bash
 docker network rm $(docker network ls -q)
 ```
 Prune the system:

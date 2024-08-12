@@ -132,6 +132,8 @@ SELECT * FROM pg_extension WHERE extname = 'vectorscale';
 <a href="https://lighthouse-book.sigmaprime.io/">lighthouse</a><br />
 <a href="https://docs.timescale.com/self-hosted/latest/install/installation-docker/">pgvectorscale timescale</a><br />
 
+# troubleshoot ###################################################################
+
 # zkevm_bridge logs ./lib/zkevm_bridge.star<br />
 ```bash
 kurtosis service logs cdk-v1 zkevm-bridge-ui-001
@@ -161,7 +163,7 @@ docker stop graphana
 # run the zkevm-prover standalone
 docker run -it --rm -p 50071:50071 -p 50061:50061 hermeznetwork/zkevm-prover:v6.0.2 /bin/bash
 
-# troubleshoot ###################################################################
+
 
 list enclaves
 ```bash

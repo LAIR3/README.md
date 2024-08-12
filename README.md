@@ -150,6 +150,15 @@ generic instruction
 docker run --name zkevm-bridge-ui -p 80:8080 -v /path/to/.env:/app/.env leovct/zkevm-bridge-ui:multi-network
 ```
 
+# erigon standalone
+
+```bash
+docker --version
+docker network create erigon-net
+docker run -d --name cdk-erigon-sequencer --network erigon-net -p 8123:8123 -p 6900:6900 -p 9091:9091 -p 6060:6060 -v erigon-data:/home/erigon/data -e CDK_ERIGON_SEQUENCER=1 hermeznetwork/cdk-erigon:2.0.0-beta15 sh -c "sleep 10 && cdk-erigon --pprof=true --pprof.addr 0.0.0.0 --config /etc/cdk-erigon/config.yaml"
+docker logs -f cdk-erigon-sequencer
+```
+
 # recomended diagnostics
 ```bash
 sudo apt install netstat hardinfo

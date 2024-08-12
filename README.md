@@ -152,6 +152,7 @@ sudo apt install netstat hardinfo
 docker run -d --name=grafana -p 3000:3000 grafana/grafana:latest
 docker start grafana
 open http://localhost:3000/login
+docker logs grafana
 docker stop graphana
 ```
 

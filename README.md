@@ -161,8 +161,9 @@ docker stop graphana
 ```
 
 # run the zkevm-prover standalone
+```bash
 docker run -it --rm -p 50071:50071 -p 50061:50061 hermeznetwork/zkevm-prover:v6.0.2 /bin/bash
-
+```
 # ENCLAVES
 
 # list enclaves
@@ -261,7 +262,7 @@ cast balance --ether 0xE34aaF64b29273B7D567FCFc40544c014EEe9970
 cast send --legacy --private-key 0x12d7de8621a77640c9241b2595ba78ce443d05e94090365ab3bb5e19df82c625 --value 0.01ether 0x0000000000000000000000000000000000000000
 ```
 
-Load Testing with Polygon CLI
+# Load Testing with Polygon CLI
 ```bash
 polycli loadtest --requests 500 --legacy --rpc-url $ETH_RPC_URL --verbosity 700 --rate-limit 5 --mode t --private-key 0x12d7de8621a77640c9241b2595ba78ce443d05e94090365ab3bb5e19df82c625
 ```

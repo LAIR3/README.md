@@ -151,7 +151,7 @@ docker run --name zkevm-bridge-ui -p 80:8080 -v /path/to/.env:/app/.env leovct/z
 sudo apt install netstat hardinfo
 ```
 
-# run grapha as a standalone
+# run grafana as a standalone
 ```bash
 docker run -d --name=grafana -p 3000:3000 grafana/grafana:latest
 docker start grafana

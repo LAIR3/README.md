@@ -73,9 +73,9 @@ docker network inspect NAME
 ```bash
 
 
-kurtosis-cli<br />
 
 # polygon-cli blockchain swiss army knife source build
+
 ```bash
 snap install yq
 sudo apt install bc protoc

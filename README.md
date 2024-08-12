@@ -163,23 +163,23 @@ docker stop graphana
 # run the zkevm-prover standalone
 docker run -it --rm -p 50071:50071 -p 50061:50061 hermeznetwork/zkevm-prover:v6.0.2 /bin/bash
 
+# ENCLAVES
 
-
-list enclaves
+# list enclaves
 ```bash
 kurtosis enclave ls
 ```
 
-Inspect the Kurtosis enclave
+# Inspect the Kurtosis enclave
 ```bash
 kurtosis enclave inspect bdk-v2
 ```
 
-Check the logs of the failing service
+# Check the logs of the failing service
 ```bash
 kurtosis service logs bdk-v2 zkevm-bridge-ui-001
 ```
-Open a shell into the service container to manually inspect and debug
+# Open a shell into the service container to manually inspect and debug
 ```bash
 kurtosis service shell bdk-v2 zkevm-bridge-ui-001
 ```
@@ -193,50 +193,52 @@ cd BDK
 sh scripts/tool_check.sh
 ```
 
-Clean Up Previous Environments
+# Clean Up Previous Environments
 
 ```bash
 kurtosis clean --all
 ```
 
-BDK as Kurtosis Enclave
+# START
+# BDK-v3 as Kurtosis Enclave
 
 ```bash
-kurtosis run --enclave bdk-v2 --args-file params.yml --image-download always .
+kurtosis run --enclave BDK-v3 --args-file params.yml --image-download always .
 ```
 
-Inspect Enclave for Dashboard Details
+# Inspect Enclave for Dashboard Details
 
 ```bash
-kurtosis enclave inspect bdk-v2
+kurtosis enclave inspect BDK-v3
 ```
 
-View Grafana Dashboard
+# View Grafana Dashboard
 
 ```bash
 open http://127.0.0.1:49701/dashboards
+open http://127.0.0.1:49701/login
 ```
 
-Prometheus Targets
+# Prometheus Targets
 
 ```
 open http://127.0.0.1:49651/targets
 ```
 
-Fetch Service Logs
+# Fetch Service Logs
 
 ```bash
 kurtosis service logs bdk-v2 zkevm-agglayer-001
 ```
 
-Add Permissionless Node
+# Add Permissionless Node
 
 ```bash
 yq -Y --in-place 'with_entries(if .key == "deploy_zkevm_permissionless_node" then .value = true elif .value | type == "boolean" then .value = false else . end)' params.yml
 kurtosis run --enclave cdk-v1 --args-file params.yml --image-download always .
 ```
 
-Sync External Permissionless Node
+# Sync External Permissionless Node
 
 ```bash
 cp /path/to/external/genesis.json templates/permissionless-node/genesis.json
@@ -244,7 +246,7 @@ yq -Y --in-place 'with_entries(if .key == "deploy_zkevm_permissionless_node" the
 kurtosis run --enclave cdk-v1 --args-file params.yml --image-download always .
 ```
 
-Simple RPC Calls
+# Simple RPC Calls
 
 ```bash
 export ETH_RPC_URL="$(kurtosis port print cdk-v1 zkevm-node-rpc-001 http-rpc)"
@@ -252,7 +254,8 @@ cast block-number
 cast balance --ether 0xE34aaF64b29273B7D567FCFc40544c014EEe9970
 ```
 
-Send Transactions
+# chain interactions
+# Send Transactions
 
 ```bash
 cast send --legacy --private-key 0x12d7de8621a77640c9241b2595ba78ce443d05e94090365ab3bb5e19df82c625 --value 0.01ether 0x0000000000000000000000000000000000000000
@@ -265,15 +268,15 @@ polycli loadtest --requests 500 --legacy --rpc-url $ETH_RPC_URL --verbosity 700 
 
 # Observability Tools
 
-Prometheus
+# <a href="https://prometheus.io/">Prometheus</a>
 Prometheus captures all the metrics for the running services.
 Accessible via: http://127.0.0.1:49678
 
-Grafana
+# <a href="https://grafana.com/">Grafana</a>
 Dashboards for visualizing metrics.
 Accessible via: http://127.0.0.1:49701
 
-Panoptichain
+# Panoptichain
 Monitors on-chain metrics such as blocks, transactions, and smart contract calls.
 Accessible via: http://127.0.0.1:49651
 

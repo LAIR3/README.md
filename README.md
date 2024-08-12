@@ -1,4 +1,4 @@
-# layer 3 blockchain deployment kit<br />
+# layer 3 Blockchain Deployment Kit<br />
 instructions are somewhat specific to Ubuntu 22.04LTS<br />
 
 # requirements

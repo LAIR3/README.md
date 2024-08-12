@@ -72,8 +72,6 @@ docker network ls
 docker network inspect NAME
 ```
 
-
-
 # polygon-cli blockchain swiss army knife source build
 
 ```bash
@@ -83,7 +81,7 @@ git clone https://github.com/maticnetwork/polygon-cli.git
 cd polygon-cli
 make install
 ```
-# foundry<br />
+# foundry
 ```bash
 curl -L https://foundry.paradigm.xyz | bash
 source $HOME/.bashrc
@@ -109,7 +107,7 @@ set postgresql master password
 export POSTGRES_MASTER_PASSWORD="your_secure_password"
 ```
 
-Set Validator PostgreSQL Password
+# Set Validator PostgreSQL Password
 
 Log into PostgreSQL
 ```bash
